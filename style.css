@@ -1,0 +1,57 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: darkgray;
+	font-family: sans-serif;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+button {
+	margin-bottom: 650px;
+	position: absolute;
+	height: 40px;
+	width: 150px;
+	background: rgba(100, 180, 200, 1);
+	font-size: 14px;
+	outline: none;
+}
+
+button:hover {
+	background: rgba(110, 190, 220, 1);
+	transform: scale(1.02);
+	color: rgb(50, 50, 50);
+}
+
+#sketch-area {
+	border: 3px solid black;
+	height: 500px;
+	width: 500px;
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.main {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.sketch-square {
+	border: 1px solid black;
+}
+
+.sketch-square:hover {
+	background: blue;
+}
