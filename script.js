@@ -1,4 +1,9 @@
-for (let i = 0; i < 16; i++) {
+document.documentElement.style.setProperty('--num-of-rows', 16);
+document.documentElement.style.setProperty('--num-of-columns', 16);
+
+let startingGrid = 256
+
+for (let i = 0; i < startingGrid; i++) {
 	const newDiv = document.createElement('div')
 	newDiv.classList.add('sketch-square')
 	document.querySelector("#sketch-area").appendChild(newDiv)
@@ -26,9 +31,9 @@ newGrid.addEventListener("click", () => {
 	let newSize = prompt(`How many rows should the new grid have?`)
 
 	if (isNaN(newSize) === true) {
-		console.log(`Please enter a number between 1 and 20.`)
+		alert(`Input must be a number.`)
 	} else if (newSize < 1 || newSize > 20) {
-		console.log(`Number must be between 1 and 20.`)
+		alert(`Number must be between 1 and 20.`)
 	} else {
 		clearGrid()
 	}

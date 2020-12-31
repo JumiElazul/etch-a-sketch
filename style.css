@@ -4,6 +4,13 @@
 	box-sizing: border-box;
 }
 
+/* Root is setting variables to be changed within script.js for flexible resizing of the grid. */
+
+:root {
+	--num-of-rows: 0;
+	--num-of-columns: 0;
+}
+
 body {
 	background: darkgray;
 	font-family: sans-serif;
@@ -30,13 +37,17 @@ button:hover {
 	color: rgb(50, 50, 50);
 }
 
+/* Sketch area grid-template-rows and grid-template-columns are using the repeat function by the
+variables determined in the root variable.  This should give a proper, evenly spaced grid, whose
+size can be changed flexibly. */
+
 #sketch-area {
 	border: 3px solid black;
 	height: 500px;
 	width: 500px;
 	display: grid;
-	grid-template-rows: 1fr 1fr 1fr 1fr;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: repeat(var(--num-of-rows), 1fr);
+	grid-template-columns: repeat(var(--num-of-columns), 1fr);
 }
 
 .main {
