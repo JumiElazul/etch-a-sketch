@@ -19,12 +19,8 @@ header {
 body {
 	background: darkgray;
 	font-family: sans-serif;
-	height: 100%;
-	width: 100%;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-content: center;
 }
 
 button {
@@ -43,7 +39,7 @@ button:hover {
 
 footer {
 	align-self: center;
-	margin-bottom: 20px;
+	margin-top: 20px;
 }
 
 /* Sketch area grid-template-rows and grid-template-columns are using the repeat function by the
@@ -52,22 +48,15 @@ size can be changed flexibly. */
 
 #sketch-area {
 	border: 3px solid black;
-	height: 750px;
-	width: 750px;
+	height: 800px;
+	width: 800px;
 	display: grid;
 	grid-template-rows: repeat(var(--num-of-rows), 1fr);
 	grid-template-columns: repeat(var(--num-of-columns), 1fr);
-	margin-left: 3px;
-	margin-bottom: 200px;
 }
 
 .main {
-	height: 100%;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	align-self: center;
 }
 
 .sketch-square {
@@ -75,14 +64,9 @@ size can be changed flexibly. */
 	background: rgb(230, 230, 230);
 }
 
-.hover-over {
-	background: blue;
-}
-
 .button-area {
-	width: 41%;
-	margin-top: 50px;
-	margin-bottom: 20px;
+	width: 800px;
+	padding: 20px;
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
