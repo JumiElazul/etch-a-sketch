@@ -62,7 +62,7 @@ size can be changed flexibly. */
 }
 
 .sketch-square {
-	border: 1px dotted black;
+	border: 1px dotted rgb(220, 220, 220);
 	background: rgb(230, 230, 230);
 }
 
