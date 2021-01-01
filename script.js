@@ -1,8 +1,10 @@
-// Initializing variables to be used in functions to change grid size.
+// Initializing variables to be used in functions to change grid size, and draw color..
 
 let numOfRows = 0
 let numOfColumns = 0
 let gridSize = 0
+let colors = ['rgba(70, 70, 70, 1)', 'rgba(70, 70, 70, .85)']
+
 let selectGridSquare = document.querySelectorAll('.sketch-square')
 
 // Running the function to create the initial grid.
@@ -14,9 +16,18 @@ selectGridSquare.forEach(function (square) {
 })
 
 function changeGridColor (e) {
-	let colors = ['rgba(70, 70, 70, 1)', 'rgba(70, 70, 70, .85)']
-	let pickColor = colors[Math.floor(Math.random() * colors.length)]
- 	e.target.style.backgroundColor = pickColor
+	const rainbowBox = document.querySelector(".rainbow-box")
+
+	if (!rainbowBox.checked) {
+		let pickColor = colors[Math.floor(Math.random() * colors.length)]
+	 	e.target.style.backgroundColor = pickColor
+	
+	} else {
+		let red = Math.floor(Math.random() * 255)
+		let green = Math.floor(Math.random() * 255)
+		let blue = Math.floor(Math.random() * 255)
+		e.target.style.backgroundColor = `rgb(${red}, ${green}, ${blue}`
+	}
 }
 
 // This function grabs the grid as a NodeList(array), determines the length of it,
